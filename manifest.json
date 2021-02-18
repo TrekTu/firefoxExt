@@ -1,23 +1,27 @@
 {
 
   "manifest_version": 2,
-  "name": "Borderify",
+  "name": "web helper",
   "version": "1.0",
 
-  "description": "Adds a red border to all webpages matching mozilla.org.",
+  "description": "my personal extension.",
 
   "icons": {
     "48": "icons/logo.png"
   },
-
+  
   "content_scripts": [
     {
       "matches": ["*://*.pornhub.com/*"],
-      "js": ["borderify.js"]
+      "js": ["pornhub.js"]
     },
 	 {
       "matches": ["*://*.91porn.com/*"],
       "js": ["91porn.js"]
+    },
+	 {
+      "matches": ["*://*.oxfordlearnersdictionaries.com/*"],
+      "js": ["thirdParty/jquery.js","oxford.js"]
     }
   ]
 
